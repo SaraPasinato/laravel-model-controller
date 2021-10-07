@@ -7,7 +7,8 @@ use App\Models\Movie;
 class MovieController extends Controller
 {
     public function index(){
-        $movies=[];
+        $movies= Movie::all();
+       // dd($movies);
         return view('movies.index',compact('movies'));
     }
 }
